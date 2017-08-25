@@ -1,6 +1,10 @@
 import * as PIXI from 'pixi.js'
 
+import update from './update.coffee'
+
 # based on: http://pixijs.github.io/examples/#/basics/basic.js
+
+
 
 app = new PIXI.Application(800, 600, {backgroundColor : 0x1099bb})
 document.body.appendChild(app.view)
@@ -20,8 +24,9 @@ app.stage.addChild(bunny)
 
 # Listen for animate update
 app.ticker.add (delta) ->
-    #  just for fun, let's rotate mr rabbit a little
-    # delta is 1 if running at 100% performance
-    # creates frame-independent tranformation
-    bunny.rotation += 0.1 * delta
+    update(delta, bunny)
+    
+if module.hot
+    module.hot.accept './update.coffee', () ->
+        console.log 'Accepting the updated update module!'
 

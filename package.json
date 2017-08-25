@@ -2,16 +2,17 @@
   "name": "pixi-starter",
   "version": "1.0.0",
   "description": "Pixi starter project w/ Hot Module Reload & CoffeeScript",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.conf.coffee",
+    "start": "webpack-dev-server --open --config webpack.conf.coffee"
   },
   "author": "John-Kim Murphy <john@leftium.com>",
   "license": "MIT",
   "devDependencies": {
     "coffee-loader": "^0.8.0",
-    "webpack": "^3.5.5"
+    "webpack": "^3.5.5",
+    "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {
     "coffeescript": "^1.12.7",
