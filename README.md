@@ -18,20 +18,22 @@
 
 ### To install:
 
-`
+```
 git clone https://github.com/Leftium/pixi-starter.git
 cd pixi-starter
 npm install
-`
+```
+
+then...
 
 
 ### To run with hot module replacement:
 
-`
+```
 npm run start
 # Open http://localhost:8080.
 # Then modify update.coffee file.
-`
+```
 
 
 
