@@ -4,8 +4,11 @@ webpack = require 'webpack'
 module.exports =
     entry: './src/index.coffee'
     output:
+        path: path.resolve(__dirname, 'build')
         filename: './bundle.js'
+        publicPath: '/build/'
     devServer:
+        publicPath: '/build/'
         inline: true # Must be true for some reason...
         hot: true
     resolve:

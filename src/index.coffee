@@ -25,7 +25,7 @@ app.stage.addChild(bunny)
 # Listen for animate update
 app.ticker.add (delta) ->
     update(delta, bunny)
-    
+
 if module.hot
     module.hot.accept './update.coffee', () ->
         console.log 'Accepting the updated update module!'
